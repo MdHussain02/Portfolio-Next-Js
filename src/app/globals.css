@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #000;
+}
+::-webkit-scrollbar-thumb {
+    background: #333;
+}
+
+/* Selection */
+::selection {
+    background: #fff;
+    color: #000;
+}
+
+/* Select dropdown styling */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+
+select option {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+}
+
+select option:checked,
+select option:hover {
+    background: linear-gradient(#fff, #fff);
+    background-color: #fff !important;
+    color: #000 !important;
+    box-shadow: 0 0 10px 100px #fff inset;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 20s linear infinite;
+}
+
+/* Line clamp */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Solar system orbit animations */
+@keyframes orbit-cw {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbit-ccw {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+/* Inner orbit - faster, clockwise */
+.animate-orbit-inner {
+    animation: orbit-cw 12s linear infinite;
+}
+
+.animate-orbit-inner-reverse {
+    animation: orbit-ccw 12s linear infinite;
+}
+
+/* Outer orbit - slower, counter-clockwise */
+.animate-orbit-outer {
+    animation: orbit-ccw 20s linear infinite;
+}
+
+.animate-orbit-outer-reverse {
+    animation: orbit-cw 20s linear infinite;
+}
+
+/* Smooth animations for count-up and progress bars */
+@keyframes smoothFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes smoothPulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+.animate-count-up {
+    animation: smoothFadeIn 0.6s ease-out;
+}
+
+.animate-progress-bar {
+    animation: smoothFadeIn 0.8s ease-out;
+}
+
+/* Enhanced progress bar styling */
+.progress-bar {
+    transition: width 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: width;
+}
+
+.progress-bar-smooth {
+    animation: smoothPulse 2s ease-in-out;
+}
+
+/* Tabular numbers for consistent counting */
+.tabular-nums {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+}
+
+/* Smooth hover effects for interactive elements */
+.smooth-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hardware acceleration for better performance */
+.gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Optimized skill bar animations */
+.skill-progress-bar {
+    contain: layout style paint;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.skill-container {
+    contain: layout;
+    transform: translateZ(0);
+}
+
+/* Smooth cubic bezier for natural motion */
+.smooth-progress {
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Performance optimizations */
+.optimize-animations {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform, opacity;
+}

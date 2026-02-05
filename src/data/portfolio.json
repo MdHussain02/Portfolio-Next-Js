@@ -1,0 +1,196 @@
+{
+  "personal": {
+    "name": "Muhammad Hussain",
+    "initials": "MH",
+    "title": "React.js Developer",
+    "email": "258hussain258@gmail.com",
+    "phone": "+91 9567358435",
+    "location": "Kochi, Kerala, India",
+    "bio": "React.js developer focused on building scalable, high-performance web applications and modern user interfaces.",
+    "aboutMe": [
+      "I am a passionate React.js developer currently working on eCommerce and dashboard-based applications. I enjoy building responsive, user-friendly, and scalable web applications using modern frontend technologies.",
+      "I have experience working with React, Next.js, state management libraries, and API integrations. I strongly focus on writing clean, maintainable code and continuously improving my frontend development skills."
+    ],
+    "resumeUrl": "/resume.pdf",
+    "available": true
+  },
+  "social": {
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourusername",
+    "twitter": "",
+    "dribbble": ""
+  },
+  "stats": [
+    { "label": "Experience", "value": "2+ Years" },
+    { "label": "Projects Completed", "value": "15+" },
+    { "label": "Commits", "value": "1000+" },
+    { "label": "Merges", "value": "50+" }
+  ],
+  "services": [
+    {
+      "id": "web-dev",
+      "icon": "code",
+      "title": "Frontend Web Development",
+      "description": "Building scalable and responsive web applications using React.js, Next.js, and modern UI frameworks."
+    },
+    {
+      "id": "dashboard",
+      "icon": "desktop",
+      "title": "Dashboard Development",
+      "description": "Developing interactive and data-driven dashboards with optimized performance and user experience."
+    },
+    {
+      "id": "ui-dev",
+      "icon": "sparkles",
+      "title": "UI Implementation",
+      "description": "Transforming design mockups into pixel-perfect, responsive, and accessible user interfaces."
+    }
+  ],
+  "experience": [
+    {
+      "id": "exp-1",
+      "title": "React.js Developer",
+      "company": "Webandcrafts",
+      "period": "2024 - Present",
+      "description": "Working on eCommerce and dashboard applications using React.js and Next.js. Implemented authentication, protected routing, reusable components, and performance optimizations. Received top score during probation assessment."
+    },
+    {
+      "id": "exp-2",
+      "title": "Frontend Developer Trainee",
+      "company": "Kompetenzen Technologies",
+      "period": "2023 - 2024",
+      "description": "Completed training in modern frontend web development using React.js and full stack fundamentals."
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "degree": "B.Tech",
+      "school": "MES Institute of Technology and Management, Kollam",
+      "period": "Completed",
+      "description": "Bachelor's degree in Engineering."
+    }
+  ],
+  "certifications": ["React Frontend Development Training"],
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "ChatFreeGPT",
+      "description": "Custom ChatGPT-like implementation built from scratch exploring conversational AI and prompt-based interactions.",
+      "tags": ["Python", "AI", "Chatbot"],
+      "category": "Web App",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/MdHussain02/chatfreegpt",
+      "featured": true
+    },
+    {
+      "id": "proj-2",
+      "title": "ChatFreeGPT Mobile App",
+      "description": "Flutter-based mobile application version of ChatFreeGPT providing conversational AI experience on mobile devices.",
+      "tags": ["Flutter", "Mobile App"],
+      "category": "Mobile",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/MdHussain02/Chatfreegptapp",
+      "featured": true
+    },
+    {
+      "id": "proj-3",
+      "title": "MESMERA Fest Website",
+      "description": "Event website developed for MESMERA fest with event information and registration integration.",
+      "tags": ["HTML", "CSS", "Bootstrap"],
+      "category": "Web App",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/MdHussain02/Mesmera24",
+      "featured": true
+    },
+    {
+      "id": "proj-4",
+      "title": "Plant Doctor",
+      "description": "Plant disease detection and fertilizer recommendation system using machine learning concepts.",
+      "tags": ["Flutter", "ML Integration"],
+      "category": "Mobile",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/MdHussain02/PlantDoctor",
+      "featured": false
+    },
+    {
+      "id": "proj-5",
+      "title": "Data Seeder Using JS",
+      "description": "Utility project for seeding structured data programmatically into databases using JavaScript.",
+      "tags": ["JavaScript", "Node.js"],
+      "category": "Web App",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/MdHussain02/Data-Seeder-Using-Js",
+      "featured": false
+    },
+    {
+      "id": "proj-6",
+      "title": "React TypeScript Chrome Extension Starter",
+      "description": "Starter template for building Chrome extensions using React and TypeScript.",
+      "tags": ["React", "TypeScript", "Chrome Extension"],
+      "category": "UI/UX",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/MdHussain02/Typescript-React-Chrome-Extension-Starter",
+      "featured": false
+    },
+    {
+      "id": "proj-7",
+      "title": "Node.js GraphQL Starter",
+      "description": "Starter backend template using Node.js, Express, TypeScript and GraphQL for scalable API development.",
+      "tags": ["Node.js", "GraphQL", "TypeScript"],
+      "category": "Web App",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/MdHussain02/NodeJs-Express-TypeScript-GraphQL-Starter",
+      "featured": false
+    }
+  ],
+  "skills": {
+    "frontend": [
+      { "name": "React.js", "level": 90, "icon": "react" },
+      { "name": "Next.js", "level": 75, "icon": "nextjs" },
+      { "name": "JavaScript", "level": 88, "icon": "javascript" },
+      { "name": "TypeScript", "level": 70, "icon": "typescript" },
+      { "name": "Tailwind CSS", "level": 85, "icon": "tailwind" },
+      { "name": "Bootstrap", "level": 90, "icon": "bootstrap" }
+    ],
+    "backend": [
+      { "name": "Node.js", "level": 65, "icon": "nodejs" },
+      { "name": "MongoDB", "level": 70, "icon": "mongodb" }
+    ],
+    "tools": [
+      { "name": "Git", "level": 85, "icon": "git" },
+      { "name": "Vercel", "level": 80, "icon": "vercel" },
+      { "name": "Figma", "level": 75, "icon": "figma" },
+      { "name": "Redux / Recoil", "level": 80, "icon": "redux" },
+      { "name": "SWR", "level": 75, "icon": "swr" }
+    ]
+  },
+  "softSkills": [
+    { "name": "Problem Solving", "level": 90 },
+    { "name": "Team Collaboration", "level": 92 },
+    { "name": "Communication", "level": 85 },
+    { "name": "Time Management", "level": 88 },
+    { "name": "Adaptability", "level": 90 },
+    { "name": "Attention to Detail", "level": 92 }
+  ],
+  "learningTech": [
+    "AI Integration",
+    "Advanced Next.js",
+    "Three.js",
+    "System Design"
+  ],
+  "navLinks": [
+    { "href": "/", "label": "Home" },
+    { "href": "/about", "label": "About" },
+    { "href": "/projects", "label": "Projects" },
+    { "href": "/skills", "label": "Skills" },
+    { "href": "/contact", "label": "Contact" }
+  ],
+  "projectCategories": ["All", "Web App", "Mobile", "UI/UX", "E-commerce"],
+  "contactSubjects": [
+    { "value": "project", "label": "Project Inquiry" },
+    { "value": "collaboration", "label": "Collaboration" },
+    { "value": "job", "label": "Job Opportunity" },
+    { "value": "other", "label": "Other" }
+  ]
+}
