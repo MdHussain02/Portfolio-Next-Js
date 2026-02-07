@@ -20,20 +20,25 @@ const StarField: React.FC<StarFieldProps> = ({
       opacity: number;
       delay: number;
       duration: number;
+      animationType: string;
     }>
   >([]);
 
   useEffect(() => {
     const generateStars = () => {
       const newStars = [];
+      const animations = ["star-blink", "star-twinkle", "star-flicker"];
+
       for (let i = 0; i < starCount; i++) {
         newStars.push({
           x: Math.random() * 100,
           y: Math.random() * 100,
           size: Math.random() * 2 + 1,
-          opacity: Math.random() * 0.5 + 0.5,
-          delay: Math.random() * 4,
-          duration: 2 + Math.random() * 2,
+          opacity: Math.random() * 0.3 + 0.7,
+          delay: Math.random() * 5,
+          duration: 1.5 + Math.random() * 3,
+          animationType:
+            animations[Math.floor(Math.random() * animations.length)],
         });
       }
       setStars(newStars);
@@ -51,7 +56,7 @@ const StarField: React.FC<StarFieldProps> = ({
       {stars.map((star, index) => (
         <div
           key={index}
-          className="absolute rounded-full bg-white animate-pulse"
+          className={`absolute rounded-full bg-white ${star.animationType}`}
           style={{
             left: `${star.x}%`,
             top: `${star.y}%`,
@@ -60,7 +65,7 @@ const StarField: React.FC<StarFieldProps> = ({
             opacity: star.opacity,
             animationDelay: `${star.delay}s`,
             animationDuration: `${star.duration}s`,
-            boxShadow: `0 0 ${star.size * 2}px rgba(255, 255, 255, 0.5)`,
+            boxShadow: `0 0 ${star.size * 3}px rgba(255, 255, 255, 0.8)`,
           }}
         />
       ))}

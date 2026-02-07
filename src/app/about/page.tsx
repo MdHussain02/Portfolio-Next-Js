@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   usePersonal,
   useStats,
@@ -33,10 +34,15 @@ export default function About() {
       <Section>
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <Animate>
-            <div className="aspect-square max-w-sm mx-auto border border-white bg-white/5 flex items-center justify-center">
-              <span className="text-8xl font-bold text-white/20">
-                {personal.initials}
-              </span>
+            <div className="aspect-square max-w-sm mx-auto border border-white bg-white/5 overflow-hidden">
+              <Image
+                src="/profile.jpg"
+                alt={`${personal.name} - Profile Picture`}
+                width={400}
+                height={400}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
           </Animate>
 

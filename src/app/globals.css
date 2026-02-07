@@ -193,6 +193,75 @@ select option:hover {
     will-change: transform, opacity;
 }
 
+/* Star blinking animations */
+@keyframes star-blink {
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes star-twinkle {
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    25% {
+        opacity: 0.4;
+        transform: scale(0.9);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    }
+    75% {
+        opacity: 0.8;
+        transform: scale(1.1);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    }
+}
+
+@keyframes star-flicker {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0.2;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0.4;
+    }
+    40% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    60% {
+        opacity: 1;
+    }
+}
+
+.star-blink {
+    animation: star-blink 2s ease-in-out infinite;
+}
+
+.star-twinkle {
+    animation: star-twinkle 3s ease-in-out infinite;
+}
+
+.star-flicker {
+    animation: star-flicker 1.5s linear infinite;
+}
+
 /* Check Lines Background Utility Classes */
 .bg-check-lines {
     background-image:
