@@ -64,7 +64,7 @@ export default function About() {
             </Animate>
             <Animate delay={0.15}>
               <div className="flex flex-wrap gap-3 pt-2">
-                <Button href="/contact">Let's Talk</Button>
+                <Button href="/contact">Let&apos;s Talk</Button>
                 <Button href={personal.resumeUrl} variant="outline">
                   <span className="flex items-center gap-1.5">
                     <DownloadIcon size={14} />

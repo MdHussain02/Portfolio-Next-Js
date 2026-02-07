@@ -10,9 +10,14 @@ export { SocialLinks } from "./SocialLinks";
 export { TypeWriter } from "./TypeWriter";
 export { CountUp } from "./CountUp";
 export { OrbitingBadges } from "./OrbitingBadges";
-export { GlowCard } from "./GlowCard";
+
 export { FilterButton } from "./FilterButton";
 export { CountUpStat } from "./CountUpStat";
+export { default as CheckLinesBackground } from "./CheckLinesBackground";
+export { default as InteractiveParticles } from "./InteractiveParticles";
+export { default as AnimatedGridOverlay } from "./AnimatedGridOverlay";
+export { default as StarField } from "./StarField";
+export { default as PageLoading } from "./PageLoading";
 
 // Icons
 export * from "./Icons";

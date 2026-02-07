@@ -45,7 +45,7 @@ export default function Home() {
 
             <Animate delay={0.03}>
               <p className="text-gray-500 uppercase tracking-wider text-sm">
-                Hello, I'm
+                Hello, I&apos;m
               </p>
             </Animate>
 
@@ -131,10 +131,10 @@ export default function Home() {
         <Animate onScroll>
           <div className="border border-white/20 p-10 text-center">
             <h2 className="text-2xl font-bold text-white mb-3">
-              Let's Work Together
+              Let&apos;s Work Together
             </h2>
             <p className="text-gray-500 mb-6 max-w-md mx-auto">
-              Have a project in mind? I'd love to hear about it.
+              Have a project in mind? I&apos;d love to hear about it.
             </p>
             <Button href="/contact" size="lg">
               Start a Conversation

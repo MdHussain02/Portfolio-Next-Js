@@ -67,6 +67,7 @@ select option:hover {
 .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -190,4 +191,624 @@ select option:hover {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
     will-change: transform, opacity;
+}
+
+/* Check Lines Background Utility Classes */
+.bg-check-lines {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px) !important;
+    background-size: 50px 50px !important;
+}
+
+.bg-check-lines-sm {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px) !important;
+    background-size: 30px 30px !important;
+}
+
+.bg-check-lines-lg {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 80px 80px;
+}
+
+.bg-check-dots {
+    background-image: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.025) 1px,
+        transparent 1px
+    );
+    background-size: 50px 50px;
+}
+
+.bg-check-diagonal {
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 255, 255, 0.015) 10px,
+        rgba(255, 255, 255, 0.015) 11px
+    );
+}
+
+/* Animated background patterns */
+@keyframes grid-move {
+    0% {
+        background-position:
+            0 0,
+            0 0;
+    }
+    25% {
+        background-position:
+            15px 15px,
+            -15px 15px;
+    }
+    50% {
+        background-position:
+            30px 30px,
+            -30px 0;
+    }
+    75% {
+        background-position:
+            15px 45px,
+            -15px -15px;
+    }
+    100% {
+        background-position:
+            60px 60px,
+            -60px -60px;
+    }
+}
+
+.bg-check-lines-animated {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px) !important;
+    background-size: 50px 50px !important;
+    animation: grid-move 20s linear infinite !important;
+}
+
+/* Clean visible grid options */
+.bg-grid-clean {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+.bg-grid-subtle {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.bg-grid-micro {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+}
+
+/* Smooth animated grid variants */
+.bg-grid-flow {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: grid-flow 30s ease-in-out infinite;
+}
+
+.bg-grid-pulse {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 55px 55px;
+    animation: grid-pulse-smooth 8s ease-in-out infinite;
+}
+
+.bg-grid-wave {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 45px 45px;
+    animation: grid-wave 15s ease-in-out infinite;
+}
+
+.bg-grid-slow {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 70px 70px;
+    animation: grid-move 40s linear infinite;
+}
+
+.bg-grid-breathe {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: grid-breathe 12s ease-in-out infinite;
+}
+
+@keyframes grid-flow {
+    0%,
+    100% {
+        background-position:
+            0 0,
+            0 0;
+        opacity: 1;
+    }
+    25% {
+        background-position:
+            25px 12px,
+            -12px 25px;
+        opacity: 0.8;
+    }
+    50% {
+        background-position:
+            50px 25px,
+            -25px 50px;
+        opacity: 1;
+    }
+    75% {
+        background-position:
+            25px 37px,
+            -37px 25px;
+        opacity: 0.9;
+    }
+}
+
+@keyframes grid-pulse-smooth {
+    0%,
+    100% {
+        background-size: 55px 55px;
+        opacity: 0.8;
+    }
+    50% {
+        background-size: 65px 65px;
+        opacity: 1;
+    }
+}
+
+@keyframes grid-wave {
+    0%,
+    100% {
+        background-position:
+            0 0,
+            0 0;
+        transform: translateY(0);
+    }
+    25% {
+        background-position:
+            22px 11px,
+            -11px 22px;
+        transform: translateY(-2px);
+    }
+    50% {
+        background-position:
+            45px 22px,
+            -22px 45px;
+        transform: translateY(0);
+    }
+    75% {
+        background-position:
+            22px 33px,
+            -33px 22px;
+        transform: translateY(2px);
+    }
+}
+
+@keyframes grid-breathe {
+    0%,
+    100% {
+        background-size: 50px 50px;
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    50% {
+        background-size: 60px 60px;
+        opacity: 1;
+        transform: scale(1.02);
+    }
+}
+
+/* Advanced Interactive Animation Classes */
+.grid-hover-glow:hover {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    transition: background-image 0.3s ease;
+}
+
+.grid-magnetic {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transition: transform 0.1s ease-out;
+}
+
+.grid-wave {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: wave-distort 8s ease-in-out infinite;
+}
+
+.grid-pulse {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: grid-pulse 4s ease-in-out infinite;
+}
+
+.grid-spiral {
+    background-image: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.05) 1px,
+        transparent 1px
+    );
+    background-size: 40px 40px;
+    animation: spiral-rotate 15s linear infinite;
+}
+
+.grid-parallax {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size:
+        80px 80px,
+        40px 40px;
+    animation: parallax-move 20s linear infinite;
+}
+
+/* Particle system backgrounds */
+.particle-field {
+    background-image:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 60% 70%,
+            rgba(255, 255, 255, 0.08) 2px,
+            transparent 2px
+        ),
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(255, 255, 255, 0.06) 1px,
+            transparent 1px
+        );
+    background-size:
+        100px 100px,
+        150px 150px,
+        80px 80px;
+    animation: particle-float 25s linear infinite;
+}
+
+.constellation {
+    background-image:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 30% 80%,
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 70% 30%,
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px
+        );
+    background-size: 200px 200px;
+    position: relative;
+}
+
+.constellation::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        45deg,
+        transparent 48%,
+        rgba(255, 255, 255, 0.02) 49%,
+        rgba(255, 255, 255, 0.02) 51%,
+        transparent 52%
+    );
+    background-size: 100px 100px;
+    animation: constellation-connect 20s ease-in-out infinite;
+}
+
+/* Interactive hover zones */
+.interactive-zone {
+    position: relative;
+    overflow: hidden;
+}
+
+.interactive-zone::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.interactive-zone:hover::before {
+    opacity: 1;
+}
+
+/* Advanced Keyframe Animations */
+@keyframes wave-distort {
+    0%,
+    100% {
+        background-position:
+            0 0,
+            0 0;
+        filter: none;
+    }
+    25% {
+        background-position:
+            10px 5px,
+            -5px 10px;
+        filter: blur(0.5px);
+    }
+    50% {
+        background-position:
+            -10px 10px,
+            10px -5px;
+        filter: none;
+    }
+    75% {
+        background-position:
+            5px -10px,
+            -10px 5px;
+        filter: blur(0.3px);
+    }
+}
+
+@keyframes grid-pulse {
+    0%,
+    100% {
+        background-size: 50px 50px;
+        opacity: 0.05;
+    }
+    50% {
+        background-size: 55px 55px;
+        opacity: 0.1;
+    }
+}
+
+@keyframes spiral-rotate {
+    0% {
+        background-position: 0 0;
+        transform: rotate(0deg);
+    }
+    100% {
+        background-position: 40px 40px;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes parallax-move {
+    0% {
+        background-position:
+            0 0,
+            0 0;
+    }
+    100% {
+        background-position:
+            80px 80px,
+            -40px -40px;
+    }
+}
+
+@keyframes particle-float {
+    0% {
+        background-position:
+            0 0,
+            0 0,
+            0 0;
+    }
+    33% {
+        background-position:
+            100px 20px,
+            -50px 100px,
+            80px -30px;
+    }
+    66% {
+        background-position:
+            -50px 150px,
+            150px -20px,
+            -80px 120px;
+    }
+    100% {
+        background-position:
+            0 0,
+            0 0,
+            0 0;
+    }
+}
+
+@keyframes constellation-connect {
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+}
+
+/* Matrix rain effect */
+.matrix-rain {
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 2px,
+            rgba(0, 255, 0, 0.03) 2px,
+            rgba(0, 255, 0, 0.03) 4px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            transparent 20px,
+            rgba(0, 255, 0, 0.02) 20px,
+            rgba(0, 255, 0, 0.02) 22px
+        );
+    animation: matrix-fall 3s linear infinite;
+}
+
+@keyframes matrix-fall {
+    0% {
+        background-position:
+            0 0,
+            0 0;
+    }
+    100% {
+        background-position:
+            0 20px,
+            20px 0;
+    }
+}
+
+/* Glitch effect */
+.glitch-grid {
+    background-image:
+        linear-gradient(rgba(255, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(0, 0, 255, 0.03) 1px, transparent 1px);
+    background-size:
+        50px 50px,
+        50px 50px,
+        30px 30px;
+    animation: glitch-shift 0.5s infinite;
+}
+
+@keyframes glitch-shift {
+    0%,
+    100% {
+        background-position:
+            0 0,
+            0 0,
+            0 0;
+        filter: none;
+    }
+    10% {
+        background-position:
+            2px 0,
+            0 0,
+            -1px 0;
+        filter: hue-rotate(90deg);
+    }
+    20% {
+        background-position:
+            -2px 0,
+            0 2px,
+            1px 0;
+        filter: hue-rotate(180deg);
+    }
+    30% {
+        background-position:
+            0 0,
+            -2px 0,
+            0 -1px;
+        filter: hue-rotate(270deg);
+    }
+    40% {
+        background-position:
+            0 2px,
+            0 0,
+            2px 0;
+        filter: none;
+    }
+    50% {
+        background-position:
+            0 -2px,
+            2px 0,
+            -2px 0;
+        filter: hue-rotate(45deg);
+    }
+}
+
+/* Reactive animations for scroll */
+.scroll-reactive {
+    transition: all 0.1s ease-out;
+}
+
+/* Morphing backgrounds */
+.morph-grid {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: morph-pattern 10s ease-in-out infinite;
+}
+
+@keyframes morph-pattern {
+    0%,
+    100% {
+        background-size: 50px 50px;
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.05) 1px,
+                transparent 1px
+            );
+    }
+    25% {
+        background-size: 30px 30px;
+        background-image: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px
+        );
+    }
+    50% {
+        background-size: 40px 40px;
+        background-image:
+            linear-gradient(
+                45deg,
+                rgba(255, 255, 255, 0.05) 1px,
+                transparent 1px
+            ),
+            linear-gradient(
+                -45deg,
+                rgba(255, 255, 255, 0.05) 1px,
+                transparent 1px
+            );
+    }
+    75% {
+        background-size: 60px 60px;
+        background-image: repeating-conic-gradient(
+            from 0deg,
+            transparent 0deg,
+            rgba(255, 255, 255, 0.05) 5deg,
+            transparent 10deg
+        );
+    }
 }

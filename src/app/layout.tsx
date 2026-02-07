@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar, Footer } from "@/components/layout";
 import { portfolioData } from "@/hooks/usePortfolioData";
+import { StarField } from "@/components/ui";
+import { LoadingProvider } from "@/components/providers/LoadingProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -56,10 +58,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased bg-black min-h-screen`}>
-        <Navbar />
-        <main className="pt-20">{children}</main>
-        <Footer />
+      <body
+        className={`${inter.variable} antialiased bg-black min-h-screen bg-check-lines`}
+      >
+        <LoadingProvider>
+          <StarField starCount={300} />
+          <div className="relative z-10">
+            <Navbar />
+            <main className="pt-20">{children}</main>
+            <Footer />
+          </div>
+        </LoadingProvider>
       </body>
     </html>
   );
