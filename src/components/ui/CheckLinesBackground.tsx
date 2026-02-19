@@ -45,7 +45,7 @@ const CheckLinesBackground: React.FC<CheckLinesBackgroundProps> = ({
   const [ripples, setRipples] = useState<
     Array<{ x: number; y: number; id: number; time: number }>
   >([]);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | null>(null);
 
   const getPatternId = () =>
     `check-lines-${variant}-${gridSize}-${animationType}`;

@@ -25,7 +25,7 @@ export const Footer = memo(function Footer() {
   ];
 
   return (
-    <footer className="border-t border-white/10 mt-16">
+    <footer className="border-t border-white/10 mt-16 bg-black">
       <div className="max-w-6xl mx-auto px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}

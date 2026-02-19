@@ -21,11 +21,10 @@ export const Navbar = memo(function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 border-b ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 bg-black transition-all duration-200 border-b ${scrolled
           ? "bg-black/95 border-white/20 py-3"
           : "bg-black/50 border-white/10 py-5"
-      }`}
+        }`}
     >
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
         <Link
@@ -42,11 +41,10 @@ export const Navbar = memo(function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-xs uppercase tracking-wider transition-colors ${
-                pathname === link.href
+              className={`text-xs uppercase tracking-wider transition-colors ${pathname === link.href
                   ? "text-white"
                   : "text-gray-500 hover:text-white"
-              }`}
+                }`}
             >
               {link.label}
             </Link>
@@ -71,9 +69,8 @@ export const Navbar = memo(function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`block py-2 text-sm uppercase tracking-wider ${
-                  pathname === link.href ? "text-white" : "text-gray-500"
-                }`}
+                className={`block py-2 text-sm uppercase tracking-wider ${pathname === link.href ? "text-white" : "text-gray-500"
+                  }`}
               >
                 {link.label}
               </Link>
