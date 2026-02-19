@@ -13,6 +13,7 @@ import {
   OrbitingBadges,
   getServiceIcon,
   ArrowDownIcon,
+  Atom,
 } from "@/components/ui";
 
 export default function Home() {
@@ -85,16 +86,15 @@ export default function Home() {
           </div>
 
           {/* Decorative with orbiting badges */}
-          <div className="hidden lg:flex justify-center">
-            <OrbitingBadges />
+          <div className="hidden lg:flex justify-center h-[500px]">
+            <Atom />
           </div>
         </div>
 
         {/* Scroll indicator */}
         <div
-          className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-gray-500 text-xs uppercase tracking-wider transition-all duration-500 ${
-            showScroll ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
+          className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-gray-500 text-xs uppercase tracking-wider transition-all duration-500 ${showScroll ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
         >
           <span>Scroll</span>
           <ArrowDownIcon size={14} className="animate-bounce" />

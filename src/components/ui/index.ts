@@ -19,5 +19,8 @@ export { default as AnimatedGridOverlay } from "./AnimatedGridOverlay";
 export { default as StarField } from "./StarField";
 export { default as PageLoading } from "./PageLoading";
 
+// Animations
+export { Atom } from "./Atom";
+
 // Icons
 export * from "./Icons";
