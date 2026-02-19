@@ -30,7 +30,7 @@ const PageLoading: React.FC<PageLoadingProps> = ({
     }
   }, [isLoading, onComplete]);
 
-  if (!isLoading && !fadeOut) return null;
+  if (!isLoading) return null;
 
   const renderLoader = () => {
     switch (variant) {
@@ -85,9 +85,8 @@ const PageLoading: React.FC<PageLoadingProps> = ({
 
   return (
     <div
-      className={`fixed inset-0 z-50 bg-black flex items-center justify-center transition-opacity duration-500 ${
-        fadeOut ? "opacity-0" : "opacity-100"
-      }`}
+      className={`fixed inset-0 z-50 bg-black flex items-center justify-center transition-opacity duration-500 ${fadeOut ? "opacity-0 pointer-events-none" : "opacity-100"
+        }`}
     >
       <div className="flex flex-col items-center space-y-8">
         {/* Logo/Name */}

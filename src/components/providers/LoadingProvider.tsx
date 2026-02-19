@@ -39,12 +39,7 @@ export const LoadingProvider: React.FC<LoadingProviderProps> = ({
     if (!hasLoadedBefore) {
       // First time loading - show loading screen
       sessionStorage.setItem("hasLoadedBefore", "true");
-      const timer = setTimeout(() => {
-        setIsLoading(false);
-        setHasLoaded(true);
-      }, 1500);
-
-      return () => clearTimeout(timer);
+      // PageLoading will handle the timeout and call onComplete
     } else {
       // Already loaded before - skip loading screen
       setIsLoading(false);
@@ -69,15 +64,16 @@ export const LoadingProvider: React.FC<LoadingProviderProps> = ({
 
   return (
     <LoadingContext.Provider value={contextValue}>
-      <PageLoading
-        isLoading={isLoading}
-        onComplete={() => setIsLoading(false)}
-        variant="spinner"
-      />
+      {isLoading && (
+        <PageLoading
+          isLoading={isLoading}
+          onComplete={() => setIsLoading(false)}
+          variant="spinner"
+        />
+      )}
       <div
-        className={`transition-opacity duration-300 ${
-          isLoading ? "opacity-0" : "opacity-100"
-        }`}
+        className={`transition-opacity duration-300 ${isLoading ? "opacity-0 pointer-events-none" : "opacity-100"
+          }`}
       >
         {children}
       </div>
