@@ -20,12 +20,14 @@ const Electron = ({
     speed = 6,
     icon: Icon,
     phase = 0,
+    url,
     ...props
 }: {
     radius?: number;
     speed?: number;
     icon: React.ElementType;
     phase?: number;
+    url: string;
     [key: string]: any;
 }) => {
     const ref = useRef<THREE.Mesh>(null);
@@ -63,9 +65,10 @@ const Electron = ({
                 >
                     <sphereGeometry args={[0.2]} />
                     <meshBasicMaterial color="white" visible={false} />
-                    <Html center className="pointer-events-none">
+                    <Html center className="pointer-events-auto">
                         <div
-                            className={`w-8 h-8 rounded-full bg-black border border-white/40 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-transform duration-300 ${hovered ? "scale-150 border-white bg-black/90 z-50" : "scale-100"}`}
+                            onClick={() => window.open(url, "_blank")}
+                            className={`w-8 h-8 rounded-full bg-black border border-white/40 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer transition-transform duration-300 ${hovered ? "scale-150 border-white bg-black/90 z-50" : "scale-100"}`}
                         >
                             <Icon className="text-white w-4 h-4" />
                         </div>
@@ -104,6 +107,7 @@ const AtomContent = () => {
                     radius={2.5}
                     phase={0}
                     icon={SiReact}
+                    url="https://react.dev"
                 />
                 <Electron
                     rotation={[Math.PI / 3, 0, Math.PI / 3]}
@@ -111,6 +115,7 @@ const AtomContent = () => {
                     radius={2.7}
                     phase={Math.PI / 2}
                     icon={SiNextdotjs}
+                    url="https://nextjs.org"
                 />
                 <Electron
                     rotation={[-Math.PI / 3, 0, Math.PI / 3]}
@@ -118,6 +123,7 @@ const AtomContent = () => {
                     radius={2.9}
                     phase={Math.PI}
                     icon={SiTypescript}
+                    url="https://www.typescriptlang.org"
                 />
 
                 {/* Extended Stack - Wider Orbits */}
@@ -127,6 +133,7 @@ const AtomContent = () => {
                     speed={1.3}
                     phase={0}
                     icon={SiTailwindcss}
+                    url="https://tailwindcss.com"
                 />
                 <Electron
                     radius={3.3}
@@ -134,6 +141,7 @@ const AtomContent = () => {
                     speed={1.4}
                     phase={Math.PI / 2}
                     icon={SiJavascript}
+                    url="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
                 />
                 <Electron
                     radius={3.5}
@@ -141,6 +149,7 @@ const AtomContent = () => {
                     speed={1.5}
                     phase={Math.PI}
                     icon={SiNodedotjs}
+                    url="https://nodejs.org"
                 />
                 <Electron
                     radius={3.7}
@@ -148,6 +157,7 @@ const AtomContent = () => {
                     speed={1.6}
                     phase={0}
                     icon={SiGit}
+                    url="https://git-scm.com"
                 />
                 <Electron
                     radius={3.9}
@@ -155,6 +165,7 @@ const AtomContent = () => {
                     speed={1.4}
                     phase={Math.PI / 2}
                     icon={SiFramer}
+                    url="https://www.framer.com/motion/"
                 />
             </Center>
         </group>

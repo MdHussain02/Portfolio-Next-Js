@@ -26,10 +26,12 @@ const StarField: React.FC<StarFieldProps> = ({
 
   useEffect(() => {
     const generateStars = () => {
+      const isMobile = window.innerWidth < 768;
+      const count = isMobile ? Math.min(starCount, 50) : starCount;
       const newStars = [];
       const animations = ["star-blink", "star-twinkle", "star-flicker"];
 
-      for (let i = 0; i < starCount; i++) {
+      for (let i = 0; i < count; i++) {
         newStars.push({
           x: Math.random() * 100,
           y: Math.random() * 100,
@@ -45,6 +47,10 @@ const StarField: React.FC<StarFieldProps> = ({
     };
 
     generateStars();
+
+    // Optional: Regenerate on resize if needed, but keeping it static prevents "reloading" feel on mobile address bar scroll
+    // window.addEventListener('resize', generateStars);
+    // return () => window.removeEventListener('resize', generateStars);
   }, [starCount]);
 
   return (
@@ -66,6 +72,7 @@ const StarField: React.FC<StarFieldProps> = ({
             animationDelay: `${star.delay}s`,
             animationDuration: `${star.duration}s`,
             boxShadow: `0 0 ${star.size * 3}px rgba(255, 255, 255, 0.8)`,
+            willChange: "transform, opacity",
           }}
         />
       ))}
