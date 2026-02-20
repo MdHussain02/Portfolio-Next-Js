@@ -28,8 +28,7 @@ const Electron = ({
     icon: React.ElementType;
     phase?: number;
     url: string;
-    [key: string]: any;
-}) => {
+} & Record<string, any>) => {
     const ref = useRef<THREE.Mesh>(null);
     const [hovered, setHovered] = useState(false);
 
@@ -70,7 +69,7 @@ const Electron = ({
                             onClick={() => window.open(url, "_blank")}
                             className={`w-8 h-8 rounded-full bg-black border border-white/40 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.3)] cursor-pointer transition-transform duration-300 ${hovered ? "scale-150 border-white bg-black/90 z-50" : "scale-100"}`}
                         >
-                            <Icon className="text-white w-4 h-4" />
+                            {React.createElement(Icon, { className: "text-white w-4 h-4" })}
                         </div>
                     </Html>
                 </mesh>
